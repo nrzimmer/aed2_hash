@@ -10,20 +10,24 @@ Entrada
 
 A entrada é composta por comandos, um por linha. Quatro comandos são aceitos:
 
-palavra		onde estar-se-á fazendo uma consulta à palavra indicada
-        	retorna "ok" se a palavra constar no dicionário
-        	retorna a palavra correta se a palavra for reconhecida como incorreta
-        	retorna "not found" se a palavra não for reconhecida
+palavra:
+	onde estar-se-á fazendo uma consulta à palavra indicada
+	retorna "ok" se a palavra constar no dicionário
+	retorna a palavra correta se a palavra for reconhecida como incorreta
+	retorna "not found" se a palavra não for reconhecida
 
-+        	onde a última palavra informada é adicionada ao dicionário, se não for conhecida
-	        retorna "ok" se a palavra for adicionada com sucesso
-        	retorna "fail" caso contrário (inclusive se a palavra já existe)
++:
+	onde a última palavra informada é adicionada ao dicionário, se não for conhecida
+        retorna "ok" se a palavra for adicionada com sucesso
+	retorna "fail" caso contrário (inclusive se a palavra já existe)
 
--        	onde a última palavra informada é removida do dicionário
-        	retorna "ok" se a palavra for removida com sucesso
-        	retorna "fail" caso contrário (inclusive se a palavra não existe)
+-:
+	onde a última palavra informada é removida do dicionário
+	retorna "ok" se a palavra for removida com sucesso
+	retorna "fail" caso contrário (inclusive se a palavra não existe)
 
-*        	onde indica-se que o programa pode ser encerrado
+*:
+	onde indica-se que o programa pode ser encerrado
 
 Algoritmo de reconhecimento
 
