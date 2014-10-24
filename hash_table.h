@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "linked_list.h"
 
 using namespace std;
@@ -11,6 +12,8 @@ class hash_table
     public:
         hash_table();
         bool add(string input);
+//        bool test(string input);
+//        uint32_t murmur(string in);
         bool del(string input);
         bool locate(string input);
         uint8_t loadfactor();
