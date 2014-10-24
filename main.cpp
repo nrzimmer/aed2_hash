@@ -87,16 +87,19 @@ void checkword(string input, hash_table *table)
         temp[i+1] = j;
         testes.add(temp);
     }
+    temp.assign(input);
     for (i = 0; i < input.length()-1; i++) //testa por letras trocadas;
     {
-        temp.assign(input);
         temp[i]=input[i+1];
         temp[i+1]=input[i];
         testes.add(temp);
+        temp[i]=input[i];
+        temp[i+1]=input[i+1];
     }
+    temp.assign(input);
     for (i = 0; i < input.length(); i++) //testa por uma letra errada
     {
-        temp.assign(input);
+        char tempc = temp[i];
         for (j = 'a'; j <= 'z'; j++)
         {
             temp[i] = j;
@@ -107,6 +110,7 @@ void checkword(string input, hash_table *table)
             temp[i] = '-';
             testes.add(temp);
         }
+        temp[i] = tempc;
     }
     qnt = testes.tam();
     for (i = 0; i < qnt; i++)
