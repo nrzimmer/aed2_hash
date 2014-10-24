@@ -67,23 +67,24 @@ void checkword(string input, hash_table *table)
     }
     for (i = 0; i < input.length(); i++) //testa por palavras fornecidas com uma letra a menos
     {
-        for (j = 'a'; j <= 'z'; j++)
+        temp.assign(input);
+        temp.insert(i,1,'a');
+        for (j = 'b'; j <= 'z'; j++)
         {
-            temp.assign(input);
-            temp.insert(i,1,j);
+            temp[i] = j;
             testes.add(temp);
         }
         if (i > 0)
         {
-            temp.assign(input);
-            temp.insert(i,"-");
+            temp[i] = '-';
             testes.add(temp);
         }
     }
-    for (j = 'a'; j <= 'z'; j++)
+    temp.assign(input);
+    temp.append(1,'a');
+    for (j = 'b'; j <= 'z'; j++)
     {
-        temp.assign(input);
-        temp.append(1,j);
+        temp[i+1] = j;
         testes.add(temp);
     }
     for (i = 0; i < input.length()-1; i++) //testa por letras trocadas;
@@ -103,7 +104,6 @@ void checkword(string input, hash_table *table)
         }
         if (i > 0)
         {
-            temp.assign(input);
             temp[i] = '-';
             testes.add(temp);
         }
